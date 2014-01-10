@@ -9,7 +9,7 @@ import android.view.Menu;
 
 public class SplashScreen extends Activity {
 
-	private static final int TIME = 3 * 1000;// 4 seconds 
+	private static final int TIME = 2 * 1000;// 4 seconds 
 	@Override 
 	protected void onCreate(Bundle savedInstanceState) { 
 		super.onCreate(savedInstanceState); setContentView(R.layout.activity_splash_screen); 
