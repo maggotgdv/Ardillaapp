@@ -60,7 +60,7 @@
         android:src="@drawable/busqueda_plano" />
 
     <ImageButton
-        android:id="@+id/imageButton1"
+        android:id="@+id/categorias"
         android:layout_width="30dp"
         android:layout_height="40dp"
         android:layout_alignParentTop="true"
@@ -68,6 +68,7 @@
         android:layout_marginTop="15dp"
         android:layout_toLeftOf="@+id/imageButton2"
         android:background="@drawable/fondo"
+        android:onClick="catego"
         android:scaleType="fitCenter"
         android:src="@drawable/categorias_plano" />
 
@@ -76,17 +77,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginRight="5dp"
+        android:layout_marginRight="7dp"
         android:layout_marginTop="18dp"
-        android:layout_toLeftOf="@+id/imageButton1"
+        android:layout_toLeftOf="@+id/imageButton2"
         android:layout_toRightOf="@+id/imageView1"
         android:background="@drawable/fondo"
         android:ems="10"
-        android:text="Buscar..."
+        android:hint="Buscar..."
         android:textColor="#FFFFFF"
-        android:textColorHint="#FFFFFF"
+        android:textColorHint="#DDDDDD"
         android:textSize="18sp"
-        android:typeface="sans"
-        android:visibility="invisible" />
+        android:typeface="sans" />
+
+    <ListView
+        android:id="@+id/catlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/map"
+        android:background="#333333" >
+
+    </ListView>
 
 </RelativeLayout>

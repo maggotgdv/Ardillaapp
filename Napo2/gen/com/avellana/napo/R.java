@@ -13,6 +13,8 @@ public final class R {
         public static final int buscar_dos=0x7f040001;
         public static final int fade_in=0x7f040002;
         public static final int fade_out=0x7f040003;
+        public static final int translate_in=0x7f040004;
+        public static final int translate_out=0x7f040005;
     }
     public static final class attr {
         /** <p>Must be a floating point value, such as "<code>1.2</code>".
@@ -158,10 +160,11 @@ containing a value of this type.
         public static final int opciones_plano=0x7f020005;
     }
     public static final class id {
-        public static final int action_settings=0x7f05000c;
+        public static final int action_settings=0x7f05000d;
         public static final int busco=0x7f05000b;
+        public static final int categorias=0x7f05000a;
+        public static final int catlist=0x7f05000c;
         public static final int hybrid=0x7f050004;
-        public static final int imageButton1=0x7f05000a;
         public static final int imageButton2=0x7f050009;
         public static final int imageButton3=0x7f050008;
         public static final int imageView1=0x7f050006;

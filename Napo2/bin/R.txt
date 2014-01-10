@@ -2,6 +2,8 @@ int anim buscar 0x7f040000
 int anim buscar_dos 0x7f040001
 int anim fade_in 0x7f040002
 int anim fade_out 0x7f040003
+int anim translate_in 0x7f040004
+int anim translate_out 0x7f040005
 int attr cameraBearing 0x7f010001
 int attr cameraTargetLat 0x7f010002
 int attr cameraTargetLng 0x7f010003
@@ -27,10 +29,11 @@ int drawable fondo 0x7f020002
 int drawable ic_launcher 0x7f020003
 int drawable napo_logo 0x7f020004
 int drawable opciones_plano 0x7f020005
-int id action_settings 0x7f05000c
+int id action_settings 0x7f05000d
 int id busco 0x7f05000b
+int id categorias 0x7f05000a
+int id catlist 0x7f05000c
 int id hybrid 0x7f050004
-int id imageButton1 0x7f05000a
 int id imageButton2 0x7f050009
 int id imageButton3 0x7f050008
 int id imageView1 0x7f050006
