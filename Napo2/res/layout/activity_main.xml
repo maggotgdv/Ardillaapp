@@ -28,11 +28,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="18dp"
+        android:layout_marginTop="22dp"
         android:layout_toRightOf="@+id/imageView1"
         android:text="Arequipa"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textSize="24sp"
+        android:textSize="20dp"
         android:typeface="sans" />
 
     <ImageButton
