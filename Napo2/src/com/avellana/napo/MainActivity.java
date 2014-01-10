@@ -5,17 +5,27 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
-
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.content.Context;
 import android.support.v4.app.FragmentActivity;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.Menu;
+import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
+import android.widget.TextView;
 
-public class MainActivity extends FragmentActivity implements LocationListener {
+public class MainActivity extends FragmentActivity implements LocationListener, TextWatcher {
 	 GoogleMap googlemap;// creacion de atributos
+	 TextView lugar;
+	 AutoCompleteTextView buscar;
+	 String[] items={"argentina","alabania","alemania","argelia","berlin","bolivia","mexico"};
      private LocationManager locationManager;
      private static final long MIN_TIME = 400;
      private static final float MIN_DISTANCE = 1000;
@@ -35,7 +45,11 @@ public class MainActivity extends FragmentActivity implements LocationListener {
 		 googlemap.getUiSettings().setRotateGesturesEnabled(true);
 		 locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);//activa el servicio de localizacion
 		 locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, MIN_TIME, MIN_DISTANCE, this); //lee las nuevas posiciones del punto
-
+		 lugar = (TextView)findViewById(R.id.lugares);
+		 buscar = (AutoCompleteTextView)findViewById(R.id.busco);
+		 buscar.addTextChangedListener(this);
+		 buscar.setAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_dropdown_item_1line,items));
+		 buscar.setVisibility(View.INVISIBLE);
 
 
 
@@ -60,6 +74,19 @@ public class MainActivity extends FragmentActivity implements LocationListener {
 		
 	}
 
+	public void Buscar (View view){
+		Animation arequip = AnimationUtils.loadAnimation(this, R.anim.buscar_dos);
+		arequip.reset();
+		lugar.startAnimation(arequip);
+		buscar.setVisibility(View.VISIBLE);
+		Animation animbusq = AnimationUtils.loadAnimation(this, R.anim.buscar);
+		animbusq.reset();
+		buscar.startAnimation(animbusq);
+		
+
+		
+	}
+	
 	@Override
 	public void onProviderDisabled(String provider) {
 		// TODO Auto-generated method stub
@@ -74,6 +101,26 @@ public class MainActivity extends FragmentActivity implements LocationListener {
 
 	@Override
 	public void onStatusChanged(String provider, int status, Bundle extras) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+
+	@Override
+	public void afterTextChanged(Editable s) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void beforeTextChanged(CharSequence s, int start, int count,
+			int after) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onTextChanged(CharSequence s, int start, int before, int count) {
 		// TODO Auto-generated method stub
 		
 	}

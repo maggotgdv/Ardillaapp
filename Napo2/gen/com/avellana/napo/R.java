@@ -9,8 +9,10 @@ package com.avellana.napo;
 
 public final class R {
     public static final class anim {
-        public static final int fade_in=0x7f040000;
-        public static final int fade_out=0x7f040001;
+        public static final int buscar=0x7f040000;
+        public static final int buscar_dos=0x7f040001;
+        public static final int fade_in=0x7f040002;
+        public static final int fade_out=0x7f040003;
     }
     public static final class attr {
         /** <p>Must be a floating point value, such as "<code>1.2</code>".
@@ -150,23 +152,25 @@ containing a value of this type.
     public static final class drawable {
         public static final int busqueda_plano=0x7f020000;
         public static final int categorias_plano=0x7f020001;
-        public static final int ic_launcher=0x7f020002;
-        public static final int napo_logo=0x7f020003;
-        public static final int opciones_plano=0x7f020004;
+        public static final int fondo=0x7f020002;
+        public static final int ic_launcher=0x7f020003;
+        public static final int napo_logo=0x7f020004;
+        public static final int opciones_plano=0x7f020005;
     }
     public static final class id {
-        public static final int action_settings=0x7f05000b;
+        public static final int action_settings=0x7f05000c;
+        public static final int busco=0x7f05000b;
         public static final int hybrid=0x7f050004;
         public static final int imageButton1=0x7f05000a;
         public static final int imageButton2=0x7f050009;
         public static final int imageButton3=0x7f050008;
         public static final int imageView1=0x7f050006;
+        public static final int lugares=0x7f050007;
         public static final int map=0x7f050005;
         public static final int none=0x7f050000;
         public static final int normal=0x7f050001;
         public static final int satellite=0x7f050002;
         public static final int terrain=0x7f050003;
-        public static final int textView1=0x7f050007;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
