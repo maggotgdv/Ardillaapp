@@ -9,6 +9,7 @@
     <string name="logo">logo</string>
     <color name="mapa_fondo">#38B24A</color>
     <color name="verde_lima">#85B854</color>
+    <color name="color_busqueda">#CADFAA</color>
     
 
 </resources>

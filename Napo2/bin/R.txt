@@ -18,6 +18,7 @@ int attr uiZoomControls 0x7f01000a
 int attr uiZoomGestures 0x7f01000b
 int attr useViewLifecycle 0x7f01000c
 int attr zOrderOnTop 0x7f01000d
+int color color_busqueda 0x7f080003
 int color entrada_fondo 0x7f080000
 int color mapa_fondo 0x7f080001
 int color verde_lima 0x7f080002
@@ -29,7 +30,7 @@ int drawable fondo 0x7f020002
 int drawable ic_launcher 0x7f020003
 int drawable napo_logo 0x7f020004
 int drawable opciones_plano 0x7f020005
-int id action_settings 0x7f05000d
+int id action_settings 0x7f050011
 int id busco 0x7f05000b
 int id categorias 0x7f05000a
 int id catlist 0x7f05000c
@@ -37,14 +38,19 @@ int id hybrid 0x7f050004
 int id imageButton2 0x7f050009
 int id imageButton3 0x7f050008
 int id imageView1 0x7f050006
+int id imgAnimal 0x7f05000e
 int id lugares 0x7f050007
 int id map 0x7f050005
 int id none 0x7f050000
 int id normal 0x7f050001
 int id satellite 0x7f050002
+int id subcatlist 0x7f05000d
 int id terrain 0x7f050003
+int id tvContent 0x7f05000f
+int id tvField 0x7f050010
 int layout activity_main 0x7f030000
 int layout activity_splash_screen 0x7f030001
+int layout categorias 0x7f030002
 int menu main 0x7f0a0000
 int menu splash_screen 0x7f0a0001
 int string action_settings 0x7f060012

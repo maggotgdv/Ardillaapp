@@ -137,6 +137,7 @@ containing a value of this type.
         public static final int zOrderOnTop=0x7f01000d;
     }
     public static final class color {
+        public static final int color_busqueda=0x7f080003;
         public static final int entrada_fondo=0x7f080000;
         public static final int mapa_fondo=0x7f080001;
         public static final int verde_lima=0x7f080002;
@@ -160,7 +161,7 @@ containing a value of this type.
         public static final int opciones_plano=0x7f020005;
     }
     public static final class id {
-        public static final int action_settings=0x7f05000d;
+        public static final int action_settings=0x7f050011;
         public static final int busco=0x7f05000b;
         public static final int categorias=0x7f05000a;
         public static final int catlist=0x7f05000c;
@@ -168,16 +169,21 @@ containing a value of this type.
         public static final int imageButton2=0x7f050009;
         public static final int imageButton3=0x7f050008;
         public static final int imageView1=0x7f050006;
+        public static final int imgAnimal=0x7f05000e;
         public static final int lugares=0x7f050007;
         public static final int map=0x7f050005;
         public static final int none=0x7f050000;
         public static final int normal=0x7f050001;
         public static final int satellite=0x7f050002;
+        public static final int subcatlist=0x7f05000d;
         public static final int terrain=0x7f050003;
+        public static final int tvContent=0x7f05000f;
+        public static final int tvField=0x7f050010;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
         public static final int activity_splash_screen=0x7f030001;
+        public static final int categorias=0x7f030002;
     }
     public static final class menu {
         public static final int main=0x7f0a0000;
