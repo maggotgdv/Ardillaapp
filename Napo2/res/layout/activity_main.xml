@@ -21,7 +21,8 @@
         android:layout_alignParentTop="true"
         android:layout_margin="10dp"
         android:scaleType="fitStart"
-        android:src="@drawable/napo_logo" />
+        android:src="@drawable/napo_logo"
+        android:contentDescription="@string/textvew" />
 
     <TextView
         android:id="@+id/lugares"
@@ -30,7 +31,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="18dp"
         android:layout_toRightOf="@+id/imageView1"
-        android:text="Arequipa"
+        android:text="@string/arequipa"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textSize="18sp"
         android:typeface="sans"
@@ -45,6 +46,8 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="15dp"
         android:background="@drawable/fondo"
+        android:contentDescription="@string/textvew"
+        android:onClick="preferencias"
         android:scaleType="fitStart"
         android:src="@drawable/opciones_plano" />
 
@@ -58,7 +61,8 @@
         android:background="@drawable/fondo"
         android:onClick="Buscar"
         android:scaleType="fitCenter"
-        android:src="@drawable/busqueda_plano" />
+        android:src="@drawable/busqueda_plano"
+        android:contentDescription="@string/textvew"  />
 
     <ImageButton
         android:id="@+id/categorias"
@@ -71,7 +75,8 @@
         android:background="@drawable/fondo"
         android:onClick="catego"
         android:scaleType="fitCenter"
-        android:src="@drawable/categorias_plano" />
+        android:src="@drawable/categorias_plano" 
+        android:contentDescription="@string/textvew" />
 
     <AutoCompleteTextView
         android:id="@+id/busco"
@@ -84,10 +89,11 @@
         android:layout_toRightOf="@+id/imageView1"
         android:background="@drawable/fondo"
         android:ems="10"
-        android:hint="Buscar..."
-        android:paddingBottom="20dp"
+        android:hint="@string/buscar"
+        android:paddingBottom="30dp"
         android:textColor="#FFFFFF"
         android:textColorHint="#DDDDDD"
+        android:textColorHighlight="#333333"
         android:textSize="18sp"
         android:typeface="sans" />
 

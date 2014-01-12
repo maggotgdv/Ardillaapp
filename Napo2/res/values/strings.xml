@@ -10,6 +10,10 @@
     <color name="mapa_fondo">#38B24A</color>
     <color name="verde_lima">#85B854</color>
     <color name="color_busqueda">#CADFAA</color>
+    <string name="textvew">Textvew</string>
+    <string name="toggle">ToggleButton</string>
+    <string name="arequipa">Napo</string>
+    <string name="buscar">Buscar</string>
     
 
 </resources>

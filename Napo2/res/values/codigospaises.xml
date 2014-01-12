@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   <string-array name="pais">
+      <item>Español</item>
+      <item>Frances</item>
+      <item>Aleman</item>
+      <item>Inglés</item>
+   </string-array>
+   <string-array name="codigopais">
+      <item>ESP</item>
+      <item>FRA</item>
+      <item>ALE</item>
+      <item>ENG</item>
+   </string-array>
+</resources>

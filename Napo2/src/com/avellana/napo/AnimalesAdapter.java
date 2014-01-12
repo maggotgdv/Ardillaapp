@@ -35,6 +35,9 @@ public class AnimalesAdapter extends ArrayAdapter<Animal> {
 		this.context = context;
 		this.datos = datos;
 	}
+	public void setDatos(ArrayList<Animal> datos){
+		this.datos = datos;
+	}
 
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
@@ -49,7 +52,7 @@ public class AnimalesAdapter extends ArrayAdapter<Animal> {
 			holder = new AnimalesHolder();
 			holder.imgAnimal = (ImageView) item.findViewById(R.id.imgAnimal);
 			holder.tvContent = (TextView) item.findViewById(R.id.tvContent);
-			holder.tvField = (TextView) item.findViewById(R.id.tvField);
+			//holder.tvtoggleb = (ToggleButton) item.findViewById(R.id.tvtoggleb);
 
 			// Almacenamos el holder en el Tag de la vista.
 			item.setTag(holder);
@@ -65,7 +68,7 @@ public class AnimalesAdapter extends ArrayAdapter<Animal> {
 
 		// Asignamos los textos a los TextView.
 		holder.tvContent.setText(datos.get(position).getNombre());
-		holder.tvField.setText(String.valueOf(position));
+		//holder.tvField.setText(String.valueOf(position));
 
 		// Devolvemos la vista para que se muestre en el ListView.
 		return item;

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Habilitar/Inhabilitar Categorias">
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="comida"
+            android:title="Comida"
+            android:summary="Habilitar/Inhabilitar Cocina" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="vestimenta"
+            android:title="Vestimenta"
+            android:summary="Habilitar/Inhabilitar Vestimenta" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="salud"
+            android:title="Salud"
+            android:summary="Habilitar/Inhabilitar Salud" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="vehiculos"
+            android:title="Vehículos"
+            android:summary="Habilitar/Inhabilitar Vehículos" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="educacion"
+            android:title="Educación"
+            android:summary="Habilitar/Inhabilitar Educación" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="viajes"
+            android:title="Viajes"
+            android:summary="Habilitar/Inhabilitar Viajes" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="belleza"
+            android:title="Belleza"
+            android:summary="Habilitar/Inhabilitar Belleza" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="entretenimiento"
+            android:title="Entretenimiento"
+            android:summary="Habilitar/Inhabilitar Entretenimiento" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="musica"
+            android:title="Musica"
+            android:summary="Habilitar/Inhabilitar Musica" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="servicios_comunica"
+            android:title="Servicios Comunicacion"
+            android:summary="Habilitar/Inhabilitar Servicios Comunicacion" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="medios_comunica"
+            android:title="Medios Comunicacion"
+            android:summary="Habilitar/Inhabilitar Medios Comunicacion" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="construccion"
+            android:title="Construcción"
+            android:summary="Habilitar/Inhabilitar Construcción" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="vivienda"
+            android:title="Vivienda"
+            android:summary="Habilitar/Inhabilitar Vivienda" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="eventos"
+            android:title="Eventos"
+            android:summary="Habilitar/Inhabilitar Eventos" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="tecnologia"
+            android:title="Tecnología"
+            android:summary="Habilitar/Inhabilitar Tecnología" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="artefactos"
+            android:title="Artefactos"
+            android:summary="Habilitar/Inhabilitar Artefactos" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="social"
+            android:title="Social"
+            android:summary="Habilitar/Inhabilitar Social" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="ninos"
+            android:title="Niños"
+            android:summary="Habilitar/Inhabilitar Niños" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="profesionales"
+            android:title="Profesionales"
+            android:summary="Habilitar/Inhabilitar Profesionales" />
+        
+        <!-- <EditTextPreference
+            android:key="opcion2"
+            android:title="Preferencia 2"
+            android:summary="Descripción de la preferencia 2"
+            android:dialogTitle="Introduce valor" /> -->
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Selección de Idioma">
+        <ListPreference
+            android:key="idioma"
+            android:title="Idioma"
+            android:summary="Seleccione su idioma"
+            android:dialogTitle="Indicar Idioma"
+            android:entries="@array/pais"
+            android:entryValues="@array/codigopais" />
+    </PreferenceCategory>
+</PreferenceScreen>

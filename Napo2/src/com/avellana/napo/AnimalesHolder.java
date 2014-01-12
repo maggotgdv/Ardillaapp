@@ -12,5 +12,5 @@ import android.widget.TextView;
  */
 public class AnimalesHolder {
 	public ImageView imgAnimal;
-	public TextView tvField, tvContent;
+	public TextView tvContent;
 }
