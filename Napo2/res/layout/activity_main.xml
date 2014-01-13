@@ -90,10 +90,12 @@
         android:background="@drawable/fondo"
         android:ems="10"
         android:hint="@string/buscar"
+        android:inputType="textAutoComplete"
+        android:maxLines="1"
         android:paddingBottom="30dp"
         android:textColor="#FFFFFF"
-        android:textColorHint="#DDDDDD"
         android:textColorHighlight="#333333"
+        android:textColorHint="#DDDDDD"
         android:textSize="18sp"
         android:typeface="sans" />
 

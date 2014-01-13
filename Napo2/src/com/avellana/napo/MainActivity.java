@@ -11,8 +11,14 @@ import java.util.ArrayList;
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.GoogleMap.InfoWindowAdapter;
+import com.google.android.gms.maps.GoogleMap.OnInfoWindowClickListener;
+import com.google.android.gms.maps.GoogleMap.OnMapLongClickListener;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.avellana.napo.R;
 import com.avellana.napo.Animal;
 import com.avellana.napo.AnimalesAdapter;
@@ -40,8 +46,35 @@ import android.widget.AutoCompleteTextView;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
-public class MainActivity extends FragmentActivity implements LocationListener, TextWatcher, OnItemClickListener {
+public class MainActivity extends FragmentActivity implements LocationListener, TextWatcher, OnItemClickListener, OnMapLongClickListener, OnInfoWindowClickListener {
+	
+	
+	class MyInfoWindowAdapter implements InfoWindowAdapter{
+		private final View myContentsView;
+		MyInfoWindowAdapter(){
+			myContentsView = getLayoutInflater().inflate(R.layout.custom_info_contents, null);
+		}
+		@Override
+		public View getInfoContents(Marker marker) {
+			// TODO Auto-generated method stub
+			TextView tvTitle = ((TextView)myContentsView.findViewById(R.id.title));
+			tvTitle.setText(marker.getTitle());
+			TextView tvSnippet = ((TextView)myContentsView.findViewById(R.id.snippet));
+			tvSnippet.setText(marker.getSnippet());
+			return myContentsView;
+		}
+
+		@Override
+		public View getInfoWindow(Marker arg0) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		
+	}
+	
+	
 	GoogleMap googlemap;// creacion de atributos
 	TextView lugar;
 	ImageButton categ;
@@ -58,17 +91,21 @@ public class MainActivity extends FragmentActivity implements LocationListener, 
     int es_buscado=0;
     ListView subList;
     SharedPreferences prf;
+    final int RQS_GooglePlayServices = 1;
+    //TextView tvLocInfo;
+    
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		SupportMapFragment mf = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);//saca el mapa para manipularlo
-	    googlemap = mf.getMap();//obtiene el mapa
+	    //tvLocInfo = (TextView)findViewById(R.id.)
+		googlemap = mf.getMap();//obtiene el mapa
 	    googlemap.setMyLocationEnabled(true);//pone el boton de ubicacion
 	    listview = (ListView) findViewById(R.id.catlist);
 	    googlemap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
-		googlemap.getUiSettings().setZoomGesturesEnabled(false);
+		googlemap.getUiSettings().setZoomGesturesEnabled(true);
 		googlemap.getUiSettings().setCompassEnabled(true);
 		googlemap.getUiSettings().setMyLocationButtonEnabled(true);
 		googlemap.getUiSettings().setRotateGesturesEnabled(true);
@@ -89,6 +126,9 @@ public class MainActivity extends FragmentActivity implements LocationListener, 
 		listview.setVisibility(View.INVISIBLE);
 		listview.setAdapter(adapter);
 		listview.setOnItemClickListener((OnItemClickListener) this);
+		googlemap.setOnMapLongClickListener(this);
+		googlemap.setInfoWindowAdapter(new MyInfoWindowAdapter());
+		googlemap.setOnInfoWindowClickListener(this);
 		
 		subanimales = new ArrayList<Animal>();
 		rellenarsubList();
@@ -97,6 +137,20 @@ public class MainActivity extends FragmentActivity implements LocationListener, 
 		subList.setVisibility(View.INVISIBLE);
 		subList.setAdapter(subadapter);
 		subList.setOnItemClickListener((OnItemClickListener) this);
+		double latitude = -16.4006667;
+		double longitude = -71.55035;
+		 LatLng point = new LatLng(latitude, longitude);
+		// create marker
+		MarkerOptions marker = new MarkerOptions().position(point).snippet("Comida");
+		 
+		// Changing marker icon
+		marker.icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_launcher));
+		
+		 
+		// adding marker
+		Marker mark=googlemap.addMarker(marker);
+		mark.setTitle("Argentina");
+
 
 	}
 	private void rellenarArrayList() {
@@ -564,5 +618,14 @@ public class MainActivity extends FragmentActivity implements LocationListener, 
 		 prefe();
 		 return true;
 	 }
+	@Override
+	public void onInfoWindowClick(Marker arg0) {
+		// TODO Auto-generated method stub
+	}
+	@Override
+	public void onMapLongClick(LatLng arg0) {
+		// TODO Auto-generated method stub
+		
+	}
 
 }

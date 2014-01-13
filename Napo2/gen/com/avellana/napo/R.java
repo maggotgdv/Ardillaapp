@@ -157,16 +157,20 @@ containing a value of this type.
         public static final int activity_vertical_margin=0x7f090001;
     }
     public static final class drawable {
-        public static final int atras=0x7f020000;
-        public static final int busqueda_plano=0x7f020001;
-        public static final int categorias_plano=0x7f020002;
-        public static final int fondo=0x7f020003;
-        public static final int ic_launcher=0x7f020004;
-        public static final int napo_logo=0x7f020005;
-        public static final int opciones_plano=0x7f020006;
+        public static final int abierto=0x7f020000;
+        public static final int atras=0x7f020001;
+        public static final int busqueda_plano=0x7f020002;
+        public static final int categorias_plano=0x7f020003;
+        public static final int cerrado=0x7f020004;
+        public static final int flecha=0x7f020005;
+        public static final int fondo=0x7f020006;
+        public static final int ic_launcher=0x7f020007;
+        public static final int napo_dscto=0x7f020008;
+        public static final int napo_logo=0x7f020009;
+        public static final int opciones_plano=0x7f02000a;
     }
     public static final class id {
-        public static final int action_settings=0x7f060010;
+        public static final int action_settings=0x7f060016;
         public static final int busco=0x7f06000b;
         public static final int categorias=0x7f06000a;
         public static final int catlist=0x7f06000c;
@@ -174,20 +178,27 @@ containing a value of this type.
         public static final int imageButton2=0x7f060009;
         public static final int imageButton3=0x7f060008;
         public static final int imageView1=0x7f060006;
+        public static final int imageView2=0x7f060014;
+        public static final int imageView3=0x7f060015;
         public static final int imgAnimal=0x7f06000e;
         public static final int lugares=0x7f060007;
         public static final int map=0x7f060005;
         public static final int none=0x7f060000;
         public static final int normal=0x7f060001;
         public static final int satellite=0x7f060002;
+        public static final int snippet=0x7f060011;
         public static final int subcatlist=0x7f06000d;
         public static final int terrain=0x7f060003;
+        public static final int textView1=0x7f060012;
+        public static final int textView2=0x7f060013;
+        public static final int title=0x7f060010;
         public static final int tvContent=0x7f06000f;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
         public static final int activity_splash_screen=0x7f030001;
         public static final int categorias=0x7f030002;
+        public static final int custom_info_contents=0x7f030003;
     }
     public static final class menu {
         public static final int main=0x7f0c0000;
