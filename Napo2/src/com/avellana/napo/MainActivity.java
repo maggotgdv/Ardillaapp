@@ -46,7 +46,6 @@ import android.widget.AutoCompleteTextView;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class MainActivity extends FragmentActivity implements LocationListener, TextWatcher, OnItemClickListener, OnMapLongClickListener, OnInfoWindowClickListener {
 	

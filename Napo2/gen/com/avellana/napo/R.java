@@ -196,13 +196,15 @@ containing a value of this type.
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
-        public static final int activity_splash_screen=0x7f030001;
-        public static final int categorias=0x7f030002;
-        public static final int custom_info_contents=0x7f030003;
+        public static final int activity_perfil__negocio=0x7f030001;
+        public static final int activity_splash_screen=0x7f030002;
+        public static final int categorias=0x7f030003;
+        public static final int custom_info_contents=0x7f030004;
     }
     public static final class menu {
         public static final int main=0x7f0c0000;
-        public static final int splash_screen=0x7f0c0001;
+        public static final int perfil__negocio=0x7f0c0001;
+        public static final int splash_screen=0x7f0c0002;
     }
     public static final class string {
         public static final int action_settings=0x7f070012;
@@ -274,6 +276,7 @@ containing a value of this type.
         public static final int hello_world=0x7f070013;
         public static final int logo=0x7f070015;
         public static final int textvew=0x7f070016;
+        public static final int title_activity_perfil__negocio=0x7f07001a;
         public static final int title_activity_splash_screen=0x7f070014;
         public static final int toggle=0x7f070017;
     }

@@ -61,11 +61,13 @@ int id textView2 0x7f060013
 int id title 0x7f060010
 int id tvContent 0x7f06000f
 int layout activity_main 0x7f030000
-int layout activity_splash_screen 0x7f030001
-int layout categorias 0x7f030002
-int layout custom_info_contents 0x7f030003
+int layout activity_perfil__negocio 0x7f030001
+int layout activity_splash_screen 0x7f030002
+int layout categorias 0x7f030003
+int layout custom_info_contents 0x7f030004
 int menu main 0x7f0c0000
-int menu splash_screen 0x7f0c0001
+int menu perfil__negocio 0x7f0c0001
+int menu splash_screen 0x7f0c0002
 int string action_settings 0x7f070012
 int string app_name 0x7f070011
 int string arequipa 0x7f070018
@@ -90,6 +92,7 @@ int string common_signin_button_text_long 0x7f07000d
 int string hello_world 0x7f070013
 int string logo 0x7f070015
 int string textvew 0x7f070016
+int string title_activity_perfil__negocio 0x7f07001a
 int string title_activity_splash_screen 0x7f070014
 int string toggle 0x7f070017
 int style AppBaseTheme 0x7f0b0000

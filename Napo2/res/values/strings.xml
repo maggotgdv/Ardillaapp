@@ -5,15 +5,19 @@
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_splash_screen">SplashScreen</string>
-        <color name="entrada_fondo">#008544</color>
+
+    <color name="entrada_fondo">#008544</color>
+
     <string name="logo">logo</string>
+
     <color name="mapa_fondo">#38B24A</color>
     <color name="verde_lima">#85B854</color>
     <color name="color_busqueda">#CADFAA</color>
+
     <string name="textvew">Textvew</string>
     <string name="toggle">ToggleButton</string>
     <string name="arequipa">Napo</string>
     <string name="buscar">Buscar</string>
-    
+    <string name="title_activity_perfil__negocio">Perfil_Negocio</string>
 
 </resources>
