@@ -108,8 +108,10 @@ public class MainActivity extends FragmentActivity implements LocationListener, 
 		googlemap.getUiSettings().setCompassEnabled(true);
 		googlemap.getUiSettings().setMyLocationButtonEnabled(true);
 		googlemap.getUiSettings().setRotateGesturesEnabled(true);
+		try{
 		locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);//activa el servicio de localizacion
 		locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, MIN_TIME, MIN_DISTANCE, this); //lee las nuevas posiciones del punto
+		}catch(Exception e){};
 		lugar = (TextView)findViewById(R.id.lugares);
 		buscar = (AutoCompleteTextView)findViewById(R.id.busco);
 		buscar.addTextChangedListener(this);
@@ -238,6 +240,7 @@ public class MainActivity extends FragmentActivity implements LocationListener, 
 			lugar.startAnimation(arequip);
 			buscar.startAnimation(animbusq);
 			buscar.setVisibility(View.VISIBLE);
+			lugar.setVisibility(View.INVISIBLE);
 			categ.setVisibility(View.INVISIBLE);
 			ban=1;
 			teclado.showSoftInput(buscar, 0);
@@ -250,6 +253,7 @@ public class MainActivity extends FragmentActivity implements LocationListener, 
 			lugar.startAnimation(animbusq);
 			buscar.startAnimation(arequip);
 			categ.setVisibility(View.VISIBLE);
+			lugar.setVisibility(View.VISIBLE);
 			buscar.setVisibility(View.INVISIBLE);
 			Thread timer = new Thread(){
 				 public void run(){

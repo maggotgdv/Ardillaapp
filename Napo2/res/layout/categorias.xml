@@ -23,6 +23,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_toRightOf="@+id/imgAnimal"
+        android:paddingBottom="7dp"
         android:text="@string/textvew"
         android:textSize="20sp" />
 
