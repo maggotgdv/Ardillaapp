@@ -59,7 +59,12 @@
 
         <activity
             android:name="com.avellana.napo.Perfil_Negocio"
-            android:label="@string/title_activity_perfil__negocio" >
+            android:label="@string/title_activity_perfil__negocio"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+        </activity>
+                <activity
+            android:name=".TabContentActivity"
+            android:theme="@android:style/Theme.NoTitleBar" >
         </activity>
     </application>
 

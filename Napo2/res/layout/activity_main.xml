@@ -25,7 +25,7 @@
         android:contentDescription="@string/textvew" />
 
     <TextView
-        android:id="@+id/lugares"
+        android:id="@+id/titulos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -82,17 +82,18 @@
         android:id="@+id/busco"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginRight="7dp"
         android:layout_marginTop="18dp"
         android:layout_toLeftOf="@+id/imageButton2"
-        android:layout_toRightOf="@+id/imageView1"
         android:background="@drawable/fondo"
         android:ems="10"
         android:hint="@string/buscar"
         android:inputType="textAutoComplete"
         android:maxLines="1"
         android:paddingBottom="30dp"
+        android:paddingLeft="80dp"
         android:textColor="#FFFFFF"
         android:textColorHighlight="#333333"
         android:textColorHint="#DDDDDD"

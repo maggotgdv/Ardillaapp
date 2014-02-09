@@ -22,7 +22,6 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.avellana.napo.R;
 import com.avellana.napo.Animal;
 import com.avellana.napo.AnimalesAdapter;
-
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -48,9 +47,10 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 public class MainActivity extends FragmentActivity implements LocationListener, TextWatcher, OnItemClickListener, OnMapLongClickListener, OnInfoWindowClickListener {
-	
+	String titulo="";
 	
 	class MyInfoWindowAdapter implements InfoWindowAdapter{
+		
 		private final View myContentsView;
 		MyInfoWindowAdapter(){
 			myContentsView = getLayoutInflater().inflate(R.layout.custom_info_contents, null);
@@ -62,6 +62,7 @@ public class MainActivity extends FragmentActivity implements LocationListener, 
 			tvTitle.setText(marker.getTitle());
 			TextView tvSnippet = ((TextView)myContentsView.findViewById(R.id.snippet));
 			tvSnippet.setText(marker.getSnippet());
+			titulo=marker.getTitle();
 			return myContentsView;
 		}
 
@@ -112,7 +113,7 @@ public class MainActivity extends FragmentActivity implements LocationListener, 
 		locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);//activa el servicio de localizacion
 		locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, MIN_TIME, MIN_DISTANCE, this); //lee las nuevas posiciones del punto
 		}catch(Exception e){};
-		lugar = (TextView)findViewById(R.id.lugares);
+		lugar = (TextView)findViewById(R.id.titulos);
 		buscar = (AutoCompleteTextView)findViewById(R.id.busco);
 		buscar.addTextChangedListener(this);
 		buscar.setAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_dropdown_item_1line,items));
@@ -624,6 +625,9 @@ public class MainActivity extends FragmentActivity implements LocationListener, 
 	@Override
 	public void onInfoWindowClick(Marker arg0) {
 		// TODO Auto-generated method stub
+		Intent intent = new Intent(MainActivity.this,Perfil_Negocio.class);
+		intent.putExtra("empresa",titulo);
+		startActivity(intent);
 	}
 	@Override
 	public void onMapLongClick(LatLng arg0) {
