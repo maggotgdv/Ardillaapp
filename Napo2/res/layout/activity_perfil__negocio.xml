@@ -119,10 +119,28 @@
             android:layout_height="30dp"
             android:layout_alignLeft="@+id/ratingBar1"
             android:layout_below="@+id/ImageView01"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="30dp"
             android:layout_marginTop="10dp"
             android:scaleType="fitCenter"
             android:src="@drawable/telefono" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignTop="@+id/imageView3"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/imageView3"
+            android:src="@drawable/favoritos" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignTop="@+id/imageView4"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/imageView4"
+            android:src="@drawable/comentario" />
 
     </RelativeLayout>
 
